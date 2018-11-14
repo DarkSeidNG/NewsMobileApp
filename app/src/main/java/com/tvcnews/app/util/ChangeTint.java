@@ -8,11 +8,11 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 import com.tvcnews.app.R;
 
 /**
- * Created by iFwAxTel on 21/02/2017.
+ * Created by ifeanyi orji on 21/02/2017.
  */
 
 public class ChangeTint {
-    Context context;
+    private Context context;
     private Drawable mDrawable;
     private Drawable mWrapperDrawable;
 
