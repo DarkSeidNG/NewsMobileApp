@@ -5,10 +5,22 @@ package com.tvcnews.app.widget.boommenu.Types;
  */
 public enum OrderType {
 
+    /**
+     * Default order type.
+     */
     DEFAULT(0),
+    /**
+     * Reverse order type.
+     */
     REVERSE(1),
+    /**
+     * Random order type.
+     */
     RANDOM(2);
 
+    /**
+     * The Type.
+     */
     int type;
 
     OrderType(int type) {

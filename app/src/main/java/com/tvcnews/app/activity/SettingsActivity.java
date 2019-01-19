@@ -20,7 +20,13 @@ import com.tvcnews.app.R;
 import com.tvcnews.app.dialog.ContactUs;
 import com.tvcnews.app.util.RateApp;
 
+/**
+ * The type Settings activity.
+ */
 public class SettingsActivity extends AppCompatActivity {
+    /**
+     * The Menu but.
+     */
     ImageView menuBut;
 
     @Override

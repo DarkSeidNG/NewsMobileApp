@@ -18,11 +18,35 @@ import android.widget.TextView;
 import com.tvcnews.app.R;
 import com.tvcnews.app.util.GetDeviceMetrics;
 
+/**
+ * The type Contact us.
+ */
 public class ContactUs extends DialogFragment {
 
-    EditText name,email,msg;
-    Button cancel,send;
+    /**
+     * The Name.
+     */
+    EditText name, /**
+     * The Email.
+     */
+    email, /**
+     * The Msg.
+     */
+    msg;
+    /**
+     * The Cancel.
+     */
+    Button cancel, /**
+     * The Send.
+     */
+    send;
+    /**
+     * The Msg cont.
+     */
     LinearLayout msgCont;
+    /**
+     * The Msg sent.
+     */
     TextView msgSent;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

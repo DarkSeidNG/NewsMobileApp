@@ -34,20 +34,65 @@ import com.tvcnews.app.widget.boommenu.Types.ButtonType;
 import com.tvcnews.app.widget.boommenu.Types.PlaceType;
 import com.tvcnews.app.widget.boommenu.Util;
 
+/**
+ * The type Home activity.
+ */
 public class HomeActivity extends AppCompatActivity {
 
+    /**
+     * The View pager.
+     */
     ViewPager viewPager;
+    /**
+     * The Adapter.
+     */
     FragmentPagerAdapter adapter;
     private boolean init = false;
     private BoomMenuButton boomMenuButton;
+    /**
+     * The Sorter spinner.
+     */
     AppCompatSpinner sorterSpinner;
 
+    /**
+     * The Drawer.
+     */
     DrawerLayout drawer;
+    /**
+     * The Left drawer.
+     */
     LinearLayout leftDrawer;
+    /**
+     * The Menu but.
+     */
     ImageView menuBut;
+    /**
+     * The Tab layout.
+     */
     TabLayout tabLayout;
 
-    RelativeLayout homeCont,scheduleCont,bookmarksCont,contactCont,tipsCont,rateCont;
+    /**
+     * The Home cont.
+     */
+    RelativeLayout homeCont, /**
+     * The Schedule cont.
+     */
+    scheduleCont, /**
+     * The Bookmarks cont.
+     */
+    bookmarksCont, /**
+     * The Contact cont.
+     */
+    contactCont, /**
+     * The Tips cont.
+     */
+    tipsCont, /**
+     * The Rate cont.
+     */
+    rateCont;
+    /**
+     * The Home icon.
+     */
     ImageView homeIcon;
 
     @Override
@@ -75,6 +120,11 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Get status bar height int.
+     *
+     * @return the int
+     */
     public int getStatusBarHeight(){
         int result = 0;
         int resourceId = getResources().getIdentifier("status_bar_height","dimen","android");

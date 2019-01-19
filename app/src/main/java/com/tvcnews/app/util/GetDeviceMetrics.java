@@ -9,10 +9,25 @@ import android.view.WindowManager;
  * Created by iFwAxTel on 06/01/2017.
  */
 public class GetDeviceMetrics {
+    /**
+     * The Context.
+     */
     Context context;
+
+    /**
+     * Instantiates a new Get device metrics.
+     *
+     * @param mContext the m context
+     */
     public GetDeviceMetrics(Context mContext){
         this.context = mContext;
     }
+
+    /**
+     * Get metrics display metrics.
+     *
+     * @return the display metrics
+     */
     public DisplayMetrics getMetrics(){
         DisplayMetrics metrics = new DisplayMetrics();
         WindowManager wm = (WindowManager)context.getSystemService(Context.WINDOW_SERVICE);

@@ -15,20 +15,35 @@ public abstract class CubicBezier {
 
     /**
      * init the 4 values of the cubic-bezier
+     *
      * @param startX x of start
      * @param startY y of start
-     * @param endX x of end
-     * @param endY y of end
+     * @param endX   x of end
+     * @param endY   y of end
      */
     public void init(float startX, float startY, float endX, float endY) {
         setStart(new PointF(startX, startY));
         setEnd(new PointF(endX, endY));
     }
 
+    /**
+     * Init.
+     *
+     * @param startX the start x
+     * @param startY the start y
+     * @param endX   the end x
+     * @param endY   the end y
+     */
     public void init(double startX, double startY, double endX, double endY) {
         init((float) startX, (float) startY, (float) endX, (float) endY);
     }
-    
+
+    /**
+     * Gets offset.
+     *
+     * @param offset the offset
+     * @return the offset
+     */
     public float getOffset(float offset) {
         return getBezierCoordinateY(getXForTime(offset));
     }
@@ -64,18 +79,38 @@ public abstract class CubicBezier {
         return time * (c.x + time * (b.x + time * a.x));
     }
 
+    /**
+     * Gets start.
+     *
+     * @return the start
+     */
     public PointF getStart() {
         return start;
     }
 
+    /**
+     * Sets start.
+     *
+     * @param start the start
+     */
     public void setStart(PointF start) {
         this.start = start;
     }
 
+    /**
+     * Gets end.
+     *
+     * @return the end
+     */
     public PointF getEnd() {
         return end;
     }
 
+    /**
+     * Sets end.
+     *
+     * @param end the end
+     */
     public void setEnd(PointF end) {
         this.end = end;
     }

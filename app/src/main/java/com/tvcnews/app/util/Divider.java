@@ -12,6 +12,9 @@ import android.view.View;
 import com.tvcnews.app.R;
 
 
+/**
+ * The type Divider.
+ */
 public class Divider extends RecyclerView.ItemDecoration {
 
     //This saves the Drawable divider the seperate our recyclerView
@@ -21,8 +24,9 @@ public class Divider extends RecyclerView.ItemDecoration {
 
     /**
      * Contructor to set up the Divider class
-     * @param context
-     * @param orientation
+     *
+     * @param context     the context
+     * @param orientation the orientation
      */
     public Divider(Context context, int orientation){
         mDivider = ContextCompat.getDrawable(context, R.drawable.divider);

@@ -11,12 +11,23 @@ import android.widget.Toast;
  * Created by iFwAxTel on 02/01/2017.
  */
 public class RateApp {
+    /**
+     * The M context.
+     */
     Context mContext;
 
+    /**
+     * Instantiates a new Rate app.
+     *
+     * @param context the context
+     */
     public RateApp(Context context){
         this.mContext = context;
     }
 
+    /**
+     * Rate app.
+     */
     public void rateApp(){
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY| Intent.FLAG_ACTIVITY_MULTIPLE_TASK);

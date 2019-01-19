@@ -5,12 +5,30 @@ package com.tvcnews.app.widget.boommenu.Types;
  */
 public enum BoomType {
 
+    /**
+     * Line boom type.
+     */
     LINE(0),
+    /**
+     * Parabola boom type.
+     */
     PARABOLA(1),
+    /**
+     * Horizontal throw boom type.
+     */
     HORIZONTAL_THROW(2),
+    /**
+     * Parabola 2 boom type.
+     */
     PARABOLA_2(3),
+    /**
+     * Horizontal throw 2 boom type.
+     */
     HORIZONTAL_THROW_2(4);
 
+    /**
+     * The Type.
+     */
     int type;
 
     BoomType(int type) {

@@ -7,7 +7,17 @@ import com.tvcnews.app.widget.boommenu.Types.PlaceType;
  * Created by Weiping on 2016/4/1.
  */
 public class EndLocationsFactory {
-    
+
+    /**
+     * Get end locations int [ ] [ ].
+     *
+     * @param placeType    the place type
+     * @param screenWidth  the screen width
+     * @param screenHeight the screen height
+     * @param buttonWidth  the button width
+     * @param buttonHeight the button height
+     * @return the int [ ] [ ]
+     */
     public static int[][] getEndLocations(
             PlaceType placeType, 
             int screenWidth, 

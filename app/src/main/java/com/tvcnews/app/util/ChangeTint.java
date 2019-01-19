@@ -10,16 +10,26 @@ import com.tvcnews.app.R;
 /**
  * Created by ifeanyi orji on 21/02/2017.
  */
-
 public class ChangeTint {
     private Context context;
     private Drawable mDrawable;
     private Drawable mWrapperDrawable;
 
+    /**
+     * Instantiates a new Change tint.
+     *
+     * @param context the context
+     */
     public ChangeTint(Context context){
         this.context = context;
     }
 
+    /**
+     * Tinted icon drawable.
+     *
+     * @param icon the icon
+     * @return the drawable
+     */
     public Drawable tintedIcon(int icon) {
         int iconColor = context.getResources().getColor(R.color.colorPrimaryDark);
         mDrawable = context.getResources().getDrawable(icon);

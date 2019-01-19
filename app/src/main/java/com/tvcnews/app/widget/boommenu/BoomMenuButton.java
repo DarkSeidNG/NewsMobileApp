@@ -41,22 +41,36 @@ import java.util.Random;
  * Created by Weiping on 2016/3/19.
  * Update it on 2016/7/25
  */
-
 @SuppressWarnings("JavaDoc")
 public class BoomMenuButton extends FrameLayout
         implements
         CircleButton.OnCircleButtonClickListener,
         HamButton.OnHamButtonClickListener {
 
-    // This param is used to optimizize the memory used.
+    /**
+     * The constant MEMORY_OPTIMIZATION.
+     */
+// This param is used to optimizize the memory used.
     // When this param is set to true,
     // all the sub buttons will be created when needed
     // and will not be stored.
     public static final boolean MEMORY_OPTIMIZATION = true;
 
+    /**
+     * The constant MIN_CIRCLE_BUTTON_NUMBER.
+     */
     public static final int MIN_CIRCLE_BUTTON_NUMBER = 1;
+    /**
+     * The constant MAX_CIRCLE_BUTTON_NUMBER.
+     */
     public static final int MAX_CIRCLE_BUTTON_NUMBER = 9;
+    /**
+     * The constant MIN_HAM_BUTTON_NUMBER.
+     */
     public static final int MIN_HAM_BUTTON_NUMBER = 1;
+    /**
+     * The constant MAX_HAM_BUTTON_NUMBER.
+     */
     public static final int MAX_HAM_BUTTON_NUMBER = 4;
 
     private ViewGroup animationLayout = null;
@@ -159,10 +173,21 @@ public class BoomMenuButton extends FrameLayout
 
     private Context mContext;
 
+    /**
+     * Instantiates a new Boom menu button.
+     *
+     * @param context the context
+     */
     public BoomMenuButton(Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new Boom menu button.
+     *
+     * @param context the context
+     * @param attrs   the attrs
+     */
     public BoomMenuButton(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -681,12 +706,12 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set show animation of each sub button.
      *
-     * @param dot           The dot corresponding to the sub button.
-     * @param button        The sub button.
+     * @param dot              The dot corresponding to the sub button.
+     * @param button           The sub button.
      * @param originalLocation original location of the dot.
-     * @param startLocation Start location of the animation.
-     * @param endLocation   End location of the animation.
-     * @param index         Index of the sub button in the array.
+     * @param startLocation    Start location of the animation.
+     * @param endLocation      End location of the animation.
+     * @param index            Index of the sub button in the array.
      */
     public void setShowAnimation(
             final View dot,
@@ -1281,7 +1306,7 @@ public class BoomMenuButton extends FrameLayout
      * Set auto dismiss. If the boom menu button is auto dismiss, user can click one
      * of the sub buttons to dismiss the boom menu botton.
      *
-     * @param autoDismiss
+     * @param autoDismiss the auto dismiss
      */
     public void setAutoDismiss(boolean autoDismiss) {
         this.autoDismiss = autoDismiss;
@@ -1291,7 +1316,7 @@ public class BoomMenuButton extends FrameLayout
      * Set cancelable. If the boom menu button is cancelable, user can click
      * the background to dismiss it.
      *
-     * @param cancelable
+     * @param cancelable the cancelable
      */
     public void setCancelable(boolean cancelable) {
         this.cancelable = cancelable;
@@ -1300,7 +1325,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set frames for animaitons.
      *
-     * @param frames
+     * @param frames the frames
      */
     public void setFrames(int frames) {
         this.frames = frames;
@@ -1309,7 +1334,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set animation duration.
      *
-     * @param duration
+     * @param duration the duration
      */
     public void setDuration(int duration) {
         this.duration = duration;
@@ -1318,7 +1343,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set start delay.
      *
-     * @param delay
+     * @param delay the delay
      */
     public void setDelay(int delay) {
         this.delay = delay;
@@ -1327,7 +1352,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set rotate degrees.
      *
-     * @param rotateDegree
+     * @param rotateDegree the rotate degree
      */
     public void setRotateDegree(int rotateDegree) {
         this.rotateDegree = rotateDegree;
@@ -1336,7 +1361,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set show order type.
      *
-     * @param showOrderType
+     * @param showOrderType the show order type
      */
     public void setShowOrderType(OrderType showOrderType) {
         this.showOrderType = showOrderType;
@@ -1345,7 +1370,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set hide order type.
      *
-     * @param hideOrderType
+     * @param hideOrderType the hide order type
      */
     public void setHideOrderType(OrderType hideOrderType) {
         this.hideOrderType = hideOrderType;
@@ -1354,7 +1379,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set OnClickListener.
      *
-     * @param onClickListener
+     * @param onClickListener the on click listener
      */
     public void setOnClickListener(OnClickListener onClickListener) {
         this.onClickListener = onClickListener;
@@ -1363,13 +1388,15 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set AnimatorListener.
      *
-     * @param animatorListener
+     * @param animatorListener the animator listener
      */
     public void setAnimatorListener(AnimatorListener animatorListener) {
         this.animatorListener = animatorListener;
     }
 
     /**
+     * Get image buttons image button [ ].
+     *
      * @return The imagebuttons of sub buttons.
      */
     public ImageButton[] getImageButtons() {
@@ -1385,6 +1412,8 @@ public class BoomMenuButton extends FrameLayout
     }
 
     /**
+     * Get image views image view [ ].
+     *
      * @return The imageviews of sub buttons.
      */
     public ImageView[] getImageViews() {
@@ -1404,6 +1433,8 @@ public class BoomMenuButton extends FrameLayout
     }
 
     /**
+     * Get text views text view [ ].
+     *
      * @return The textviews of sub buttons.
      */
     public TextView[] getTextViews() {
@@ -1425,7 +1456,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set OnSubButtonClickListener.
      *
-     * @param onSubButtonClickListener
+     * @param onSubButtonClickListener the on sub button click listener
      */
     public void setOnSubButtonClickListener(OnSubButtonClickListener onSubButtonClickListener) {
         this.onSubButtonClickListener = onSubButtonClickListener;
@@ -1434,8 +1465,8 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set the color of pressed-state or normal-state of boom menu button.
      *
-     * @param pressedColor
-     * @param normalColor
+     * @param pressedColor the pressed color
+     * @param normalColor  the normal color
      */
     public void setBoomButtonBackgroundColor(int pressedColor, int normalColor) {
         Util.getInstance().setCircleButtonStateListDrawable(
@@ -1490,7 +1521,7 @@ public class BoomMenuButton extends FrameLayout
      * Dim_0 for no dim.
      * Max is Dim_9.
      *
-     * @param dimType
+     * @param dimType the dim type
      */
     public void setDimType(DimType dimType) {
         this.dimType = dimType;
@@ -1499,7 +1530,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set the click effect.
      *
-     * @param clickEffectType
+     * @param clickEffectType the click effect type
      */
     public void setClickEffectType(ClickEffectType clickEffectType) {
         setRipple(clickEffectType);
@@ -1553,7 +1584,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set the color of all textviews in the sub buttons.
      *
-     * @param color
+     * @param color the color
      */
     public void setTextViewColor(int color) {
         for (int i = 0; i < buttonNum; i++) {
@@ -1578,9 +1609,9 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set the color of all textviews in the sub buttons corresponding to the array.
      *
-     * @param colors
+     * @param colors the colors
      */
-    // TODO for now doesnt work if MEMORY OPTIMIZATION is true
+// TODO for now doesnt work if MEMORY OPTIMIZATION is true
     public void setTextViewColor(int[] colors) {
         int length = Math.min(buttonNum, colors.length);
         if (buttonType.equals(ButtonType.CIRCLE)) {
@@ -1598,7 +1629,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set the scaleType of all imageviews in the sub buttons.
      *
-     * @param scaleType
+     * @param scaleType the scale type
      */
     public void setImageViewScaleType(ImageView.ScaleType scaleType) {
         for (int i = 0; i < buttonNum; i++) {
@@ -1623,60 +1654,98 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set the boom type of boom button.
      *
-     * @param boomType
+     * @param boomType the boom type
      */
     public void setBoomType(BoomType boomType) {
         this.boomType = boomType;
     }
 
     /**
-     * @return
+     * Is closed boolean.
+     *
+     * @return boolean
      */
     public boolean isClosed() {
         return state.equals(StateType.CLOSED);
     }
 
     /**
-     * @return
+     * Is closing boolean.
+     *
+     * @return boolean
      */
     public boolean isClosing() {
         return state.equals(StateType.CLOSING);
     }
 
     /**
-     * @return
+     * Is open boolean.
+     *
+     * @return boolean
      */
     public boolean isOpen() {
         return state.equals(StateType.OPEN);
     }
 
     /**
-     * @return
+     * Is opening boolean.
+     *
+     * @return boolean
      */
     public boolean isOpening() {
         return state.equals(StateType.OPENING);
     }
 
+    /**
+     * Sets show move ease type.
+     *
+     * @param showMoveEaseType the show move ease type
+     */
     public void setShowMoveEaseType(EaseType showMoveEaseType) {
         this.showMoveEaseType = showMoveEaseType;
     }
 
+    /**
+     * Sets show scale ease type.
+     *
+     * @param showScaleEaseType the show scale ease type
+     */
     public void setShowScaleEaseType(EaseType showScaleEaseType) {
         this.showScaleEaseType = showScaleEaseType;
     }
 
+    /**
+     * Sets show rotate ease type.
+     *
+     * @param showRotateEaseType the show rotate ease type
+     */
     public void setShowRotateEaseType(EaseType showRotateEaseType) {
         this.showRotateEaseType = showRotateEaseType;
     }
 
+    /**
+     * Sets hide move ease type.
+     *
+     * @param hideMoveEaseType the hide move ease type
+     */
     public void setHideMoveEaseType(EaseType hideMoveEaseType) {
         this.hideMoveEaseType = hideMoveEaseType;
     }
 
+    /**
+     * Sets hide scale ease type.
+     *
+     * @param hideScaleEaseType the hide scale ease type
+     */
     public void setHideScaleEaseType(EaseType hideScaleEaseType) {
         this.hideScaleEaseType = hideScaleEaseType;
     }
 
+    /**
+     * Sets hide rotate ease type.
+     *
+     * @param hideRotateEaseType the hide rotate ease type
+     */
     public void setHideRotateEaseType(EaseType hideRotateEaseType) {
         this.hideRotateEaseType = hideRotateEaseType;
     }
@@ -1697,6 +1766,9 @@ public class BoomMenuButton extends FrameLayout
      * This interface tells when the boom menu button is clicked.
      */
     public interface OnClickListener {
+        /**
+         * On click.
+         */
         void onClick();
     }
 
@@ -1704,16 +1776,38 @@ public class BoomMenuButton extends FrameLayout
      * Animation listener.
      */
     public interface AnimatorListener {
+        /**
+         * To show.
+         */
         void toShow();
 
+        /**
+         * Showing.
+         *
+         * @param fraction the fraction
+         */
         void showing(float fraction);
 
+        /**
+         * Showed.
+         */
         void showed();
 
+        /**
+         * To hide.
+         */
         void toHide();
 
+        /**
+         * Hiding.
+         *
+         * @param fraction the fraction
+         */
         void hiding(float fraction);
 
+        /**
+         * Hided.
+         */
         void hided();
     }
 
@@ -1721,6 +1815,11 @@ public class BoomMenuButton extends FrameLayout
      * This interface return which button is clicked.
      */
     public interface OnSubButtonClickListener {
+        /**
+         * On click.
+         *
+         * @param buttonIndex the button index
+         */
         void onClick(int buttonIndex);
     }
 
@@ -1753,7 +1852,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set the width of the share icon lines
      *
-     * @param width
+     * @param width the width
      */
     public void setShareLineWidth(float width) {
         if (shareLines != null) shareLines.setLineWidth(width);
@@ -1762,7 +1861,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set the color of the share icon line 1
      *
-     * @param color
+     * @param color the color
      */
     public void setShareLine1Color(int color) {
         if (shareLines != null) shareLines.setLine1Color(color);
@@ -1771,7 +1870,7 @@ public class BoomMenuButton extends FrameLayout
     /**
      * Set the color of the share icon line 2
      *
-     * @param color
+     * @param color the color
      */
     public void setShareLine2Color(int color) {
         if (shareLines != null) shareLines.setLine2Color(color);
@@ -1838,6 +1937,14 @@ public class BoomMenuButton extends FrameLayout
         private int shareLine1Color = Color.WHITE;
         private int shareLine2Color = Color.WHITE;
 
+        /**
+         * Sub buttons builder.
+         *
+         * @param drawables the drawables
+         * @param colors    the colors
+         * @param strings   the strings
+         * @return the builder
+         */
         public Builder subButtons(ArrayList<Drawable> drawables, ArrayList<int[]> colors, ArrayList<String> strings) {
             this.drawables = drawables;
             this.colors = colors;
@@ -1845,6 +1952,14 @@ public class BoomMenuButton extends FrameLayout
             return this;
         }
 
+        /**
+         * Sub buttons builder.
+         *
+         * @param drawables the drawables
+         * @param colors    the colors
+         * @param strings   the strings
+         * @return the builder
+         */
         public Builder subButtons(Drawable[] drawables, int[][] colors, String[] strings) {
             this.drawables = new ArrayList<>(Arrays.asList(drawables));
             this.colors = new ArrayList<>(Arrays.asList(colors));
@@ -1852,138 +1967,304 @@ public class BoomMenuButton extends FrameLayout
             return this;
         }
 
+        /**
+         * Frames builder.
+         *
+         * @param frames the frames
+         * @return the builder
+         */
         public Builder frames(int frames) {
             this.frames = frames;
             return this;
         }
 
+        /**
+         * Duration builder.
+         *
+         * @param duration the duration
+         * @return the builder
+         */
         public Builder duration(int duration) {
             this.duration = duration;
             return this;
         }
 
+        /**
+         * Delay builder.
+         *
+         * @param delay the delay
+         * @return the builder
+         */
         public Builder delay(int delay) {
             this.delay = delay;
             return this;
         }
 
+        /**
+         * Show order builder.
+         *
+         * @param showOrderType the show order type
+         * @return the builder
+         */
         public Builder showOrder(OrderType showOrderType) {
             this.showOrderType = showOrderType;
             return this;
         }
 
+        /**
+         * Hide order builder.
+         *
+         * @param hideOrderType the hide order type
+         * @return the builder
+         */
         public Builder hideOrder(OrderType hideOrderType) {
             this.hideOrderType = hideOrderType;
             return this;
         }
 
+        /**
+         * Button builder.
+         *
+         * @param buttonType the button type
+         * @return the builder
+         */
         public Builder button(ButtonType buttonType) {
             this.buttonType = buttonType;
             return this;
         }
 
+        /**
+         * Boom builder.
+         *
+         * @param boomType the boom type
+         * @return the builder
+         */
         public Builder boom(BoomType boomType) {
             this.boomType = boomType;
             return this;
         }
 
+        /**
+         * Place builder.
+         *
+         * @param placeType the place type
+         * @return the builder
+         */
         public Builder place(PlaceType placeType) {
             this.placeType = placeType;
             return this;
         }
 
+        /**
+         * Show move ease builder.
+         *
+         * @param showMoveEaseType the show move ease type
+         * @return the builder
+         */
         public Builder showMoveEase(EaseType showMoveEaseType) {
             this.showMoveEaseType = showMoveEaseType;
             return this;
         }
 
+        /**
+         * Hide move ease builder.
+         *
+         * @param hideMoveEaseType the hide move ease type
+         * @return the builder
+         */
         public Builder hideMoveEase(EaseType hideMoveEaseType) {
             this.hideMoveEaseType = hideMoveEaseType;
             return this;
         }
 
+        /**
+         * Show scale ease builder.
+         *
+         * @param showScaleEaseType the show scale ease type
+         * @return the builder
+         */
         public Builder showScaleEase(EaseType showScaleEaseType) {
             this.showScaleEaseType = showScaleEaseType;
             return this;
         }
 
+        /**
+         * Hide scale type builder.
+         *
+         * @param hideScaleEaseType the hide scale ease type
+         * @return the builder
+         */
         public Builder hideScaleType(EaseType hideScaleEaseType) {
             this.hideScaleEaseType = hideScaleEaseType;
             return this;
         }
 
+        /**
+         * Rotate degree builder.
+         *
+         * @param rotateDegree the rotate degree
+         * @return the builder
+         */
         public Builder rotateDegree(int rotateDegree) {
             this.rotateDegree = rotateDegree;
             return this;
         }
 
+        /**
+         * Show rotate ease builder.
+         *
+         * @param showRotateEaseType the show rotate ease type
+         * @return the builder
+         */
         public Builder showRotateEase(EaseType showRotateEaseType) {
             this.showRotateEaseType = showRotateEaseType;
             return this;
         }
 
+        /**
+         * Hide rotate type builder.
+         *
+         * @param hideRotateEaseType the hide rotate ease type
+         * @return the builder
+         */
         public Builder hideRotateType(EaseType hideRotateEaseType) {
             this.hideRotateEaseType = hideRotateEaseType;
             return this;
         }
 
+        /**
+         * Auto dismiss builder.
+         *
+         * @param autoDismiss the auto dismiss
+         * @return the builder
+         */
         public Builder autoDismiss(boolean autoDismiss) {
             this.autoDismiss = autoDismiss;
             return this;
         }
 
+        /**
+         * Cancelable builder.
+         *
+         * @param cancelable the cancelable
+         * @return the builder
+         */
         public Builder cancelable(boolean cancelable) {
             this.cancelable = cancelable;
             return this;
         }
 
+        /**
+         * Dim builder.
+         *
+         * @param dimType the dim type
+         * @return the builder
+         */
         public Builder dim(DimType dimType) {
             this.dimType = dimType;
             return this;
         }
 
+        /**
+         * Click effect builder.
+         *
+         * @param clickEffectType the click effect type
+         * @return the builder
+         */
         public Builder clickEffect(ClickEffectType clickEffectType) {
             this.clickEffectType = clickEffectType;
             return this;
         }
 
+        /**
+         * Boom button shadow builder.
+         *
+         * @param boomButtonXOffsetOfShadow the boom button x offset of shadow
+         * @param boomButtonYOffsetOfShadow the boom button y offset of shadow
+         * @return the builder
+         */
         public Builder boomButtonShadow(float boomButtonXOffsetOfShadow, float boomButtonYOffsetOfShadow) {
             this.boomButtonXOffsetOfShadow = boomButtonXOffsetOfShadow;
             this.boomButtonYOffsetOfShadow = boomButtonYOffsetOfShadow;
             return this;
         }
 
+        /**
+         * Sub buttons shadow builder.
+         *
+         * @param subButtonsXOffsetOfShadow the sub buttons x offset of shadow
+         * @param subButtonsYOffsetOfShadow the sub buttons y offset of shadow
+         * @return the builder
+         */
         public Builder subButtonsShadow(float subButtonsXOffsetOfShadow, float subButtonsYOffsetOfShadow) {
             this.subButtonsXOffsetOfShadow = subButtonsXOffsetOfShadow;
             this.subButtonsYOffsetOfShadow = subButtonsYOffsetOfShadow;
             return this;
         }
 
+        /**
+         * Sub button text color builder.
+         *
+         * @param subButtonTextColor the sub button text color
+         * @return the builder
+         */
         public Builder subButtonTextColor(int subButtonTextColor) {
             this.subButtonTextColor = subButtonTextColor;
             return this;
         }
 
+        /**
+         * Sub button image scale type builder.
+         *
+         * @param subButtonImageScaleType the sub button image scale type
+         * @return the builder
+         */
         public Builder subButtonImageScaleType(ImageView.ScaleType subButtonImageScaleType) {
             this.subButtonImageScaleType = subButtonImageScaleType;
             return this;
         }
 
+        /**
+         * On boom button blick builder.
+         *
+         * @param onClickListener the on click listener
+         * @return the builder
+         */
         public Builder onBoomButtonBlick(OnClickListener onClickListener) {
             this.onClickListener = onClickListener;
             return this;
         }
 
+        /**
+         * Animator builder.
+         *
+         * @param animatorListener the animator listener
+         * @return the builder
+         */
         public Builder animator(AnimatorListener animatorListener) {
             this.animatorListener = animatorListener;
             return this;
         }
 
+        /**
+         * On sub button click builder.
+         *
+         * @param onSubButtonClickListener the on sub button click listener
+         * @return the builder
+         */
         public Builder onSubButtonClick(OnSubButtonClickListener onSubButtonClickListener) {
             this.onSubButtonClickListener = onSubButtonClickListener;
             return this;
         }
 
+        /**
+         * Share style builder.
+         *
+         * @param shareLineWidth  the share line width
+         * @param shareLine1Color the share line 1 color
+         * @param shareLine2Color the share line 2 color
+         * @return the builder
+         */
         public Builder shareStyle(float shareLineWidth, int shareLine1Color, int shareLine2Color) {
             this.shareLineWidth = shareLineWidth;
             this.shareLine1Color = shareLine1Color;
@@ -1994,10 +2275,10 @@ public class BoomMenuButton extends FrameLayout
         /**
          * Add a sub button with 3 params.
          *
-         * @param drawable
-         * @param twoColors
-         * @param string
-         * @return
+         * @param drawable  the drawable
+         * @param twoColors the two colors
+         * @param string    the string
+         * @return builder
          */
         public Builder addSubButton(Drawable drawable, int[] twoColors, String string) {
             if (drawables == null) drawables = new ArrayList<>();
@@ -2012,9 +2293,9 @@ public class BoomMenuButton extends FrameLayout
         /**
          * Add a sub button with 2 params.
          *
-         * @param drawable
-         * @param twoColors
-         * @return
+         * @param drawable  the drawable
+         * @param twoColors the two colors
+         * @return builder
          */
         public Builder addSubButton(Drawable drawable, int[] twoColors) {
             if (drawables == null) drawables = new ArrayList<>();
@@ -2027,11 +2308,11 @@ public class BoomMenuButton extends FrameLayout
         /**
          * Add a sub button with 4 params.
          *
-         * @param context
-         * @param drawable
-         * @param twoColors
-         * @param string
-         * @return
+         * @param context   the context
+         * @param drawable  the drawable
+         * @param twoColors the two colors
+         * @param string    the string
+         * @return builder
          */
         public Builder addSubButton(Context context, int drawable, int[] twoColors, String string) {
             if (drawables == null) drawables = new ArrayList<>();
@@ -2046,10 +2327,10 @@ public class BoomMenuButton extends FrameLayout
         /**
          * Add a sub button with 3 params.
          *
-         * @param context
-         * @param drawable
-         * @param twoColors
-         * @return
+         * @param context   the context
+         * @param drawable  the drawable
+         * @param twoColors the two colors
+         * @return builder
          */
         public Builder addSubButton(Context context, int drawable, int[] twoColors) {
             if (drawables == null) drawables = new ArrayList<>();
@@ -2059,6 +2340,12 @@ public class BoomMenuButton extends FrameLayout
             return this;
         }
 
+        /**
+         * Init boom menu button.
+         *
+         * @param boomMenuButton the boom menu button
+         * @return the boom menu button
+         */
         public BoomMenuButton init(BoomMenuButton boomMenuButton) {
             if (boomMenuButton == null) throw new RuntimeException("BMB is null!");
             Drawable[] drawablesInArray = new Drawable[drawables.size()];

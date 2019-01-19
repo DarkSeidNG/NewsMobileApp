@@ -78,6 +78,13 @@ public class ItemClickSupport {
         mRecyclerView . setTag(R. id . item_click_support , this);
         mRecyclerView . addOnChildAttachStateChangeListener(mAttachListener );
     }
+
+    /**
+     * Add to item click support.
+     *
+     * @param view the view
+     * @return the item click support
+     */
     public static ItemClickSupport addTo
             (RecyclerView view ) {
         ItemClickSupport support =
@@ -89,6 +96,13 @@ public class ItemClickSupport {
         }
         return support ;
     }
+
+    /**
+     * Remove from item click support.
+     *
+     * @param view the view
+     * @return the item click support
+     */
     public static ItemClickSupport
     removeFrom(RecyclerView view ) {
         ItemClickSupport support =
@@ -99,12 +113,26 @@ public class ItemClickSupport {
         }
         return support ;
     }
+
+    /**
+     * Sets on item click listener.
+     *
+     * @param listener the listener
+     * @return the on item click listener
+     */
     public ItemClickSupport
     setOnItemClickListener
             (OnItemClickListener listener ) {
         mOnItemClickListener = listener ;
         return this;
     }
+
+    /**
+     * Sets on item long click listener.
+     *
+     * @param listener the listener
+     * @return the on item long click listener
+     */
     public ItemClickSupport
     setOnItemLongClickListener
             (OnItemLongClickListener listener ) {
@@ -117,12 +145,35 @@ public class ItemClickSupport {
         view. removeOnChildAttachStateChangeListener(mAttachListener );
         view. setTag(R. id . item_click_support , null);
     }
+
+    /**
+     * The interface On item click listener.
+     */
     public interface OnItemClickListener {
+        /**
+         * On item clicked.
+         *
+         * @param recyclerView the recycler view
+         * @param position     the position
+         * @param v            the v
+         */
         void onItemClicked(RecyclerView
                                    recyclerView, int position, View v);
     }
+
+    /**
+     * The interface On item long click listener.
+     */
     public interface
     OnItemLongClickListener {
+        /**
+         * On item long clicked boolean.
+         *
+         * @param recyclerView the recycler view
+         * @param position     the position
+         * @param v            the v
+         * @return the boolean
+         */
         boolean onItemLongClicked
                 (RecyclerView recyclerView, int position,
                  View v);

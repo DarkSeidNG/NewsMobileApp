@@ -29,19 +29,64 @@ import com.tvcnews.app.util.RateApp;
 
 import java.util.ArrayList;
 
+/**
+ * The type Bookmarks activity.
+ */
 public class BookmarksActivity extends AppCompatActivity {
 
+    /**
+     * The Drawer.
+     */
     DrawerLayout drawer;
+    /**
+     * The Left drawer.
+     */
     LinearLayout leftDrawer;
+    /**
+     * The Sorter spinner.
+     */
     AppCompatSpinner sorterSpinner;
+    /**
+     * The Menu but.
+     */
     ImageView menuBut;
 
+    /**
+     * The Rec list.
+     */
     RecyclerView recList;
+    /**
+     * The Adapter.
+     */
     NewsListAdapter adapter;
+    /**
+     * The Array.
+     */
     ArrayList array = new ArrayList();
 
-    RelativeLayout homeCont,scheduleCont,bookmarksCont,contactCont,tipsCont,rateCont;
+    /**
+     * The Home cont.
+     */
+    RelativeLayout homeCont, /**
+     * The Schedule cont.
+     */
+    scheduleCont, /**
+     * The Bookmarks cont.
+     */
+    bookmarksCont, /**
+     * The Contact cont.
+     */
+    contactCont, /**
+     * The Tips cont.
+     */
+    tipsCont, /**
+     * The Rate cont.
+     */
+    rateCont;
 
+    /**
+     * The Status bar.
+     */
     RelativeLayout statusBar;
 
     @Override

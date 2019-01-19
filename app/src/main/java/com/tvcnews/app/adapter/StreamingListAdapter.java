@@ -25,10 +25,27 @@ public class StreamingListAdapter extends RecyclerView.Adapter<StreamingListAdap
 
     private LayoutInflater mInflater;
     private List<StreamingItemsObject> items;
+    /**
+     * The Context.
+     */
     Context context;
+    /**
+     * The Fm.
+     */
     FragmentManager fm;
+    /**
+     * The Activity.
+     */
     Activity activity;
 
+    /**
+     * Instantiates a new Streaming list adapter.
+     *
+     * @param context   the context
+     * @param itemsList the items list
+     * @param frag      the frag
+     * @param _activity the activity
+     */
     public StreamingListAdapter(Context context, List<StreamingItemsObject> itemsList, FragmentManager frag,Activity _activity) {
         this.context = context;
         this.items = itemsList;
@@ -37,6 +54,12 @@ public class StreamingListAdapter extends RecyclerView.Adapter<StreamingListAdap
         this.activity = _activity;
     }
 
+    /**
+     * Gets item.
+     *
+     * @param position the position
+     * @return the item
+     */
     public StreamingItemsObject getItem(int position) {
         return items.get(position);
     }
@@ -69,12 +92,38 @@ public class StreamingListAdapter extends RecyclerView.Adapter<StreamingListAdap
         return items.size();
     }
 
+    /**
+     * The type Streams holder.
+     */
     public class StreamsHolder extends RecyclerView.ViewHolder {
 
-        TextView newsTitle,newsViews;
-        ImageView newsImage,playButton;
-        AppCompatCheckBox newsBookmark,newsLikes;
+        /**
+         * The News title.
+         */
+        TextView newsTitle, /**
+         * The News views.
+         */
+        newsViews;
+        /**
+         * The News image.
+         */
+        ImageView newsImage, /**
+         * The Play button.
+         */
+        playButton;
+        /**
+         * The News bookmark.
+         */
+        AppCompatCheckBox newsBookmark, /**
+         * The News likes.
+         */
+        newsLikes;
 
+        /**
+         * Instantiates a new Streams holder.
+         *
+         * @param v the v
+         */
         public StreamsHolder(View v) {
             super(v);
             newsTitle = (TextView)v.findViewById(R.id.newsTitle);

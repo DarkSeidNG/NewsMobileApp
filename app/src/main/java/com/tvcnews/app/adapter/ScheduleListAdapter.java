@@ -22,14 +22,29 @@ public class ScheduleListAdapter extends RecyclerView.Adapter<ScheduleListAdapte
 
     private LayoutInflater mInflater;
     private List<ScheduleObject> items;
+    /**
+     * The Context.
+     */
     Context context;
 
+    /**
+     * Instantiates a new Schedule list adapter.
+     *
+     * @param context   the context
+     * @param itemsList the items list
+     */
     public ScheduleListAdapter(Context context, List<ScheduleObject> itemsList) {
         this.context = context;
         this.items = itemsList;
         mInflater = LayoutInflater.from(context);
     }
 
+    /**
+     * Gets item.
+     *
+     * @param position the position
+     * @return the item
+     */
     public ScheduleObject getItem(int position) {
         return items.get(position);
     }
@@ -56,11 +71,31 @@ public class ScheduleListAdapter extends RecyclerView.Adapter<ScheduleListAdapte
         return items.size();
     }
 
+    /**
+     * The type Programme holder.
+     */
     public class ProgrammeHolder extends RecyclerView.ViewHolder {
 
-        TextView programmeTitle,programmeAnchor,programmeTime;
+        /**
+         * The Programme title.
+         */
+        TextView programmeTitle, /**
+         * The Programme anchor.
+         */
+        programmeAnchor, /**
+         * The Programme time.
+         */
+        programmeTime;
+        /**
+         * The News image.
+         */
         ImageView newsImage;
 
+        /**
+         * Instantiates a new Programme holder.
+         *
+         * @param v the v
+         */
         public ProgrammeHolder(View v) {
             super(v);
             programmeTitle = (TextView)v.findViewById(R.id.programmeTitle);

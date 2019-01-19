@@ -10,11 +10,23 @@ import android.widget.TextView;
  */
 public class Bindings {
 
+    /**
+     * Sets font.
+     *
+     * @param textView the text view
+     * @param fontName the font name
+     */
     @BindingAdapter({"bind:font"})
     public static void setFont(TextView textView, String fontName) {
         textView.setTypeface(FontCache.getInstance(textView.getContext()).get(fontName));
     }
 
+    /**
+     * Sets font.
+     *
+     * @param editTextView the edit text view
+     * @param fontName     the font name
+     */
     @BindingAdapter({"bind:font"})
     public static void setFont(EditText editTextView, String fontName) {
         editTextView.setTypeface(FontCache.getInstance(editTextView.getContext()).get(fontName));

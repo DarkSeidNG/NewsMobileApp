@@ -35,34 +35,104 @@ import com.tvcnews.app.util.Divider;
 
 import java.util.ArrayList;
 
+/**
+ * The type Social fragment.
+ */
 public class SocialFragment extends Fragment implements Animation.AnimationListener{
 
     private int page;
     private String title;
 
+    /**
+     * The Social top.
+     */
     RadioGroup socialTop;
-    RadioButton facebook,instagram,twitter;
+    /**
+     * The Facebook.
+     */
+    RadioButton facebook, /**
+     * The Instagram.
+     */
+    instagram, /**
+     * The Twitter.
+     */
+    twitter;
+    /**
+     * The Rec list.
+     */
     RecyclerView recList;
+    /**
+     * The Adapter 1.
+     */
     SocialFBListAdapter adapter1;
+    /**
+     * The Adapter 2.
+     */
     SocialIGListAdapter adapter2;
+    /**
+     * The Adapter 3.
+     */
     SocialTWListAdapter adapter3;
+    /**
+     * The Array.
+     */
     ArrayList array = new ArrayList();
 
+    /**
+     * The Fab.
+     */
     FloatingActionButton fab;
-    TextView cancel,save,viewTitle;
+    /**
+     * The Cancel.
+     */
+    TextView cancel, /**
+     * The Save.
+     */
+    save, /**
+     * The View title.
+     */
+    viewTitle;
+    /**
+     * The M title.
+     */
     TextInputEditText mTitle;
 
+    /**
+     * The Add task.
+     */
     RelativeLayout addTask;
+    /**
+     * The Trans back.
+     */
     ImageView transBack;
+    /**
+     * The Slide up.
+     */
     Animation slideUp;
+    /**
+     * The Slide down.
+     */
     Animation slideDown;
 
+    /**
+     * The Swipe refresh.
+     */
     SwipeRefreshLayout swipeRefresh;
 
+    /**
+     * Instantiates a new Social fragment.
+     */
     public SocialFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * New instance social fragment.
+     *
+     * @param page  the page
+     * @param title the title
+     * @return the social fragment
+     */
     public static SocialFragment newInstance(int page, String title) {
         SocialFragment fragment = new SocialFragment();
         Bundle args = new Bundle();

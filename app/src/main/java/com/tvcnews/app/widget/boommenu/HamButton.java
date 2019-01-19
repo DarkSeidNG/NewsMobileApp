@@ -18,7 +18,6 @@ import com.tvcnews.app.widget.boommenu.Types.ClickEffectType;
 /**
  * Created by Weiping on 2016/3/19.
  */
-
 public class HamButton extends FrameLayout {
 
     private Context mContext;
@@ -36,10 +35,21 @@ public class HamButton extends FrameLayout {
     private int width = 0;
     private int height = (int)Util.getInstance().dp2px(40);
 
+    /**
+     * Instantiates a new Ham button.
+     *
+     * @param context the context
+     */
     public HamButton(Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new Ham button.
+     *
+     * @param context the context
+     * @param attrs   the attrs
+     */
     public HamButton(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -68,6 +78,12 @@ public class HamButton extends FrameLayout {
         shadowLayout.setLayoutParams(layoutParams1);
     }
 
+    /**
+     * Sets on ham button click listener.
+     *
+     * @param onHamButtonClickListener the on ham button click listener
+     * @param index                    the index
+     */
     public void setOnHamButtonClickListener(
             final OnHamButtonClickListener onHamButtonClickListener, final int index) {
         this.onHamButtonClickListener = onHamButtonClickListener;
@@ -75,30 +91,65 @@ public class HamButton extends FrameLayout {
         setRipple(clickEffectType);
     }
 
+    /**
+     * Sets drawable.
+     *
+     * @param drawable the drawable
+     */
     public void setDrawable(Drawable drawable) {
         if (imageView != null) imageView.setImageDrawable(drawable);
     }
 
+    /**
+     * Sets text.
+     *
+     * @param text the text
+     */
     public void setText(String text) {
         if (textView != null) textView.setText(text);
     }
 
+    /**
+     * Gets frame layout.
+     *
+     * @return the frame layout
+     */
     public FrameLayout getFrameLayout() {
         return frameLayout;
     }
 
+    /**
+     * Gets image view.
+     *
+     * @return the image view
+     */
     public ImageView getImageView() {
         return imageView;
     }
 
+    /**
+     * Gets text view.
+     *
+     * @return the text view
+     */
     public TextView getTextView() {
         return textView;
     }
 
+    /**
+     * Gets shadow layout.
+     *
+     * @return the shadow layout
+     */
     public ShadowLayout getShadowLayout() {
         return shadowLayout;
     }
 
+    /**
+     * Sets ripple.
+     *
+     * @param clickEffectType the click effect type
+     */
     public void setRipple(ClickEffectType clickEffectType) {
         this.clickEffectType = clickEffectType;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
@@ -121,24 +172,53 @@ public class HamButton extends FrameLayout {
         }
     }
 
+    /**
+     * Sets color.
+     *
+     * @param pressedColor the pressed color
+     * @param normalColor  the normal color
+     */
     public void setColor(int pressedColor, int normalColor) {
         Util.getInstance().setHamButtonStateListDrawable(
                 frameLayout, width, height, pressedColor, normalColor);
     }
 
+    /**
+     * Sets shadow color.
+     *
+     * @param mShadowColor the m shadow color
+     */
     public void setShadowColor(int mShadowColor) {
         shadowLayout.setShadowColor(mShadowColor);
     }
 
+    /**
+     * Sets shadow dx.
+     *
+     * @param mDx the m dx
+     */
     public void setShadowDx(float mDx) {
         shadowLayout.setmDx(mDx);
     }
 
+    /**
+     * Sets shadow dy.
+     *
+     * @param mDy the m dy
+     */
     public void setShadowDy(float mDy) {
         shadowLayout.setmDy(mDy);
     }
 
+    /**
+     * The interface On ham button click listener.
+     */
     public interface OnHamButtonClickListener {
+        /**
+         * On click.
+         *
+         * @param index the index
+         */
         void onClick(int index);
     }
 }

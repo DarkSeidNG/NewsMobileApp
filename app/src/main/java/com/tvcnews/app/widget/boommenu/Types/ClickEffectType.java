@@ -5,9 +5,18 @@ package com.tvcnews.app.widget.boommenu.Types;
  */
 public enum ClickEffectType {
 
+    /**
+     * Ripple click effect type.
+     */
     RIPPLE(0),
+    /**
+     * Normal click effect type.
+     */
     NORMAL(1);
 
+    /**
+     * The Type.
+     */
     int type;
 
     ClickEffectType(int type) {

@@ -10,8 +10,14 @@ import android.view.WindowManager;
 import com.tvcnews.app.R;
 
 
+/**
+ * The type Splash.
+ */
 public class Splash extends AppCompatActivity {
 
+    /**
+     * The .
+     */
     Intent i;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

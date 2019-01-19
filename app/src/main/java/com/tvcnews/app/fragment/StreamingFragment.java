@@ -21,21 +21,46 @@ import com.tvcnews.app.util.ItemClickSupport;
 
 import java.util.ArrayList;
 
+/**
+ * The type Streaming fragment.
+ */
 public class StreamingFragment extends Fragment{
 
     private int page;
     private String title;
 
+    /**
+     * The Rec list.
+     */
     RecyclerView recList;
+    /**
+     * The Adapter.
+     */
     StreamingListAdapter adapter;
+    /**
+     * The Array.
+     */
     ArrayList array = new ArrayList();
+    /**
+     * The Swipe refresh.
+     */
     SwipeRefreshLayout swipeRefresh;
 
 
+    /**
+     * Instantiates a new Streaming fragment.
+     */
     public StreamingFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * New instance streaming fragment.
+     *
+     * @param page  the page
+     * @param title the title
+     * @return the streaming fragment
+     */
     public static StreamingFragment newInstance(int page, String title) {
         StreamingFragment fragment = new StreamingFragment();
         Bundle args = new Bundle();

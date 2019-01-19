@@ -19,18 +19,39 @@ public class ShareLines extends View {
     private int line1Color = Color.WHITE;
     private int line2Color = Color.WHITE;
 
+    /**
+     * Instantiates a new Share lines.
+     *
+     * @param context the context
+     */
     public ShareLines(Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new Share lines.
+     *
+     * @param context the context
+     * @param attrs   the attrs
+     */
     public ShareLines(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
+    /**
+     * Sets locations.
+     *
+     * @param locations the locations
+     */
     public void setLocations(float[][] locations) {
         this.locations = locations;
     }
 
+    /**
+     * Sets offset.
+     *
+     * @param offset the offset
+     */
     public void setOffset(float offset) {
         this.offset = Util.getInstance().round(offset, 2);
         invalidate();
@@ -56,16 +77,31 @@ public class ShareLines extends View {
         super.onDraw(canvas);
     }
 
+    /**
+     * Sets line width.
+     *
+     * @param lineWidth the line width
+     */
     public void setLineWidth(float lineWidth) {
         this.lineWidth = lineWidth;
         invalidate();
     }
 
+    /**
+     * Sets line 1 color.
+     *
+     * @param line1Color the line 1 color
+     */
     public void setLine1Color(int line1Color) {
         this.line1Color = line1Color;
         invalidate();
     }
 
+    /**
+     * Sets line 2 color.
+     *
+     * @param line2Color the line 2 color
+     */
     public void setLine2Color(int line2Color) {
         this.line2Color = line2Color;
         invalidate();

@@ -17,7 +17,6 @@ import com.tvcnews.app.widget.boommenu.Types.ClickEffectType;
 /**
  * Created by Weiping on 2016/3/19.
  */
-
 public class CircleButton extends FrameLayout {
 
     private Context mContext;
@@ -35,10 +34,21 @@ public class CircleButton extends FrameLayout {
 
     private int radius = (int)Util.getInstance().dp2px(80) / 2;
 
+    /**
+     * Instantiates a new Circle button.
+     *
+     * @param context the context
+     */
     public CircleButton(Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new Circle button.
+     *
+     * @param context the context
+     * @param attrs   the attrs
+     */
     public CircleButton(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -57,6 +67,12 @@ public class CircleButton extends FrameLayout {
         textView = (TextView)findViewById(R.id.text);
     }
 
+    /**
+     * Sets on circle button click listener.
+     *
+     * @param onCircleButtonClickListener the on circle button click listener
+     * @param index                       the index
+     */
     public void setOnCircleButtonClickListener(
             OnCircleButtonClickListener onCircleButtonClickListener,
             int index) {
@@ -65,39 +81,85 @@ public class CircleButton extends FrameLayout {
         setRipple(clickEffectType);
     }
 
+    /**
+     * Sets drawable.
+     *
+     * @param drawable the drawable
+     */
     public void setDrawable(Drawable drawable) {
         if (imageView != null) imageView.setImageDrawable(drawable);
     }
 
+    /**
+     * Sets text.
+     *
+     * @param text the text
+     */
     public void setText(String text) {
         if (textView != null) textView.setText(text);
     }
 
+    /**
+     * Gets frame layout.
+     *
+     * @return the frame layout
+     */
     public FrameLayout getFrameLayout() {
         return frameLayout;
     }
 
+    /**
+     * Gets image button.
+     *
+     * @return the image button
+     */
     public ImageButton getImageButton() {
         return imageButton;
     }
 
+    /**
+     * Gets image view.
+     *
+     * @return the image view
+     */
     public ImageView getImageView() {
         return imageView;
     }
 
+    /**
+     * Gets shadow layout.
+     *
+     * @return the shadow layout
+     */
     public ShadowLayout getShadowLayout() {
         return shadowLayout;
     }
 
+    /**
+     * Gets text view.
+     *
+     * @return the text view
+     */
     public TextView getTextView() {
         return textView;
     }
 
+    /**
+     * Sets color.
+     *
+     * @param pressedColor the pressed color
+     * @param normalColor  the normal color
+     */
     public void setColor(int pressedColor, int normalColor) {
         Util.getInstance().setCircleButtonStateListDrawable(
                 imageButton, radius, pressedColor, normalColor);
     }
 
+    /**
+     * Sets ripple.
+     *
+     * @param clickEffectType the click effect type
+     */
     public void setRipple(ClickEffectType clickEffectType) {
         this.clickEffectType = clickEffectType;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
@@ -120,19 +182,42 @@ public class CircleButton extends FrameLayout {
         }
     }
 
+    /**
+     * Sets shadow color.
+     *
+     * @param mShadowColor the m shadow color
+     */
     public void setShadowColor(int mShadowColor) {
         shadowLayout.setShadowColor(mShadowColor);
     }
 
+    /**
+     * Sets shadow dx.
+     *
+     * @param mDx the m dx
+     */
     public void setShadowDx(float mDx) {
         shadowLayout.setmDx(mDx);
     }
 
+    /**
+     * Sets shadow dy.
+     *
+     * @param mDy the m dy
+     */
     public void setShadowDy(float mDy) {
         shadowLayout.setmDy(mDy);
     }
 
+    /**
+     * The interface On circle button click listener.
+     */
     public interface OnCircleButtonClickListener {
+        /**
+         * On click.
+         *
+         * @param index the index
+         */
         void onClick(int index);
     }
 }

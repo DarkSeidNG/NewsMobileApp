@@ -26,6 +26,12 @@ import java.math.BigDecimal;
  */
 public class Util {
 
+    /**
+     * Gets screen width.
+     *
+     * @param context the context
+     * @return the screen width
+     */
     public int getScreenWidth(Context context) {
         /*Display display = scanForActivity(context).getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -33,6 +39,12 @@ public class Util {
         return new GetDeviceMetrics(context).getMetrics().widthPixels;
     }
 
+    /**
+     * Gets screen height.
+     *
+     * @param context the context
+     * @return the screen height
+     */
     public int getScreenHeight(Context context) {
         /*Display display = scanForActivity(context).getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -40,12 +52,24 @@ public class Util {
         return new GetDeviceMetrics(context).getMetrics().heightPixels;
     }
 
+    /**
+     * Dp 2 px float.
+     *
+     * @param dp the dp
+     * @return the float
+     */
     public float dp2px(float dp){
         DisplayMetrics metrics = Resources.getSystem().getDisplayMetrics();
         float px = dp * (metrics.densityDpi / 160f);
         return Math.round(px);
     }
 
+    /**
+     * Gets darker color.
+     *
+     * @param color the color
+     * @return the darker color
+     */
     public int getDarkerColor(int color) {
         float[] hsv = new float[3];
         Color.colorToHSV(color, hsv);
@@ -53,6 +77,12 @@ public class Util {
         return Color.HSVToColor(hsv);
     }
 
+    /**
+     * Gets lighter color.
+     *
+     * @param color the color
+     * @return the lighter color
+     */
     public int getLighterColor(int color) {
         float[] hsv = new float[3];
         Color.colorToHSV(color, hsv);
@@ -60,11 +90,25 @@ public class Util {
         return Color.HSVToColor(hsv);
     }
 
+    /**
+     * Gets pressed color.
+     *
+     * @param color the color
+     * @return the pressed color
+     */
     public int getPressedColor(int color) {
         if (getLighterColor(color) == color) return getDarkerColor(color);
         else return getLighterColor(color);
     }
 
+    /**
+     * Sets circle button state list drawable.
+     *
+     * @param circleButton the circle button
+     * @param radius       the radius
+     * @param pressedColor the pressed color
+     * @param normalColor  the normal color
+     */
     @SuppressWarnings("deprecation")
     public void setCircleButtonStateListDrawable(
             View circleButton, int radius, int pressedColor, int normalColor) {
@@ -108,6 +152,15 @@ public class Util {
 
     }
 
+    /**
+     * Sets ham button state list drawable.
+     *
+     * @param linearLayout the linear layout
+     * @param width        the width
+     * @param height       the height
+     * @param pressedColor the pressed color
+     * @param normalColor  the normal color
+     */
     @SuppressWarnings("deprecation")
     public void setHamButtonStateListDrawable(
             View linearLayout, int width, int height, int pressedColor, int normalColor) {
@@ -153,9 +206,9 @@ public class Util {
     /**
      * Round to certain number of decimals
      *
-     * @param d
-     * @param decimalPlace
-     * @return
+     * @param d            the d
+     * @param decimalPlace the decimal place
+     * @return float
      */
     public float round(float d, int decimalPlace) {
         BigDecimal bd = new BigDecimal(Float.toString(d));
@@ -165,6 +218,11 @@ public class Util {
 
     private static Util ourInstance = new Util();
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static Util getInstance() {
         return ourInstance;
     }

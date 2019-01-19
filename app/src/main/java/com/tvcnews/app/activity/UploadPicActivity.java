@@ -24,12 +24,48 @@ import android.widget.RelativeLayout;
 
 import com.tvcnews.app.R;
 
+/**
+ * The type Upload pic activity.
+ */
 public class UploadPicActivity extends AppCompatActivity {
-    ImageView menuBut,imageButton1,imageButton2,imageButton3,imageButton4;
-    TextInputEditText reportName,reportLocation,reportDescription;
+    /**
+     * The Menu but.
+     */
+    ImageView menuBut, /**
+     * The Image button 1.
+     */
+    imageButton1, /**
+     * The Image button 2.
+     */
+    imageButton2, /**
+     * The Image button 3.
+     */
+    imageButton3, /**
+     * The Image button 4.
+     */
+    imageButton4;
+    /**
+     * The Report name.
+     */
+    TextInputEditText reportName, /**
+     * The Report location.
+     */
+    reportLocation, /**
+     * The Report description.
+     */
+    reportDescription;
+    /**
+     * The Submit but.
+     */
     Button submitBut;
 
+    /**
+     * The Image decode.
+     */
     String ImageDecode;
+    /**
+     * The File.
+     */
     String[] file;
 
     @Override

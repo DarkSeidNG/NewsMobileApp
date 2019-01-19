@@ -26,12 +26,39 @@ import android.widget.VideoView;
 
 import com.tvcnews.app.R;
 
+/**
+ * The type Upload vid activity.
+ */
 public class UploadVidActivity extends AppCompatActivity {
-    ImageView menuBut,playButton;
+    /**
+     * The Menu but.
+     */
+    ImageView menuBut, /**
+     * The Play button.
+     */
+    playButton;
+    /**
+     * The Image button 1.
+     */
     VideoView imageButton1;
-    TextInputEditText reportName,reportLocation,reportDescription;
+    /**
+     * The Report name.
+     */
+    TextInputEditText reportName, /**
+     * The Report location.
+     */
+    reportLocation, /**
+     * The Report description.
+     */
+    reportDescription;
+    /**
+     * The Submit but.
+     */
     Button submitBut;
 
+    /**
+     * The Vid decode.
+     */
     String vidDecode;
 
     @Override

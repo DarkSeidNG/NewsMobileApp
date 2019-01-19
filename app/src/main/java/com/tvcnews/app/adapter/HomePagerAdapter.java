@@ -16,6 +16,11 @@ public class HomePagerAdapter extends FragmentPagerAdapter {
     private static int PAGE_COUNT = 3;
     private static final String[] pageTitle = {"News","Streaming","Social"};
 
+    /**
+     * Instantiates a new Home pager adapter.
+     *
+     * @param fm the fm
+     */
     public HomePagerAdapter(FragmentManager fm) {
         super(fm);
     }

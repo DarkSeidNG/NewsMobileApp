@@ -3,9 +3,11 @@ package com.tvcnews.app.widget.boommenu.Eases;
 /**
  * Created by Weiping on 2016/3/3.
  */
-
 public class EaseInOutBounce extends CubicBezier {
 
+    /**
+     * Instantiates a new Ease in out bounce.
+     */
     public EaseInOutBounce() {
 
     }

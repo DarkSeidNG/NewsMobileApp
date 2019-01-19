@@ -21,14 +21,29 @@ public class SocialTWListAdapter extends RecyclerView.Adapter<SocialTWListAdapte
 
     private LayoutInflater mInflater;
     private List<SocialItemsObject> items;
+    /**
+     * The Context.
+     */
     Context context;
 
+    /**
+     * Instantiates a new Social tw list adapter.
+     *
+     * @param context   the context
+     * @param itemsList the items list
+     */
     public SocialTWListAdapter(Context context, List<SocialItemsObject> itemsList) {
         this.context = context;
         this.items = itemsList;
         mInflater = LayoutInflater.from(context);
     }
 
+    /**
+     * Gets item.
+     *
+     * @param position the position
+     * @return the item
+     */
     public SocialItemsObject getItem(int position) {
         return items.get(position);
     }
@@ -53,11 +68,34 @@ public class SocialTWListAdapter extends RecyclerView.Adapter<SocialTWListAdapte
         return items.size();
     }
 
+    /**
+     * The type Social holder.
+     */
     public class SocialHolder extends RecyclerView.ViewHolder {
 
-        TextView newsTitle,newsContentMini,newsTime;
-        ImageView newsImage,newsBookmark;
+        /**
+         * The News title.
+         */
+        TextView newsTitle, /**
+         * The News content mini.
+         */
+        newsContentMini, /**
+         * The News time.
+         */
+        newsTime;
+        /**
+         * The News image.
+         */
+        ImageView newsImage, /**
+         * The News bookmark.
+         */
+        newsBookmark;
 
+        /**
+         * Instantiates a new Social holder.
+         *
+         * @param v the v
+         */
         public SocialHolder(View v) {
             super(v);
             newsTitle = (TextView)v.findViewById(R.id.newsTitle);

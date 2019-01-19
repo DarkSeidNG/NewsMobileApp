@@ -16,6 +16,9 @@ import android.widget.FrameLayout;
 import com.tvcnews.app.R;
 
 
+/**
+ * The type Shadow layout.
+ */
 public class ShadowLayout extends FrameLayout {
 
     private int ShadowColor;
@@ -28,16 +31,34 @@ public class ShadowLayout extends FrameLayout {
     private boolean mInvalidateShadowOnSizeChanged = true;
     private boolean mForceInvalidateShadow = false;
 
+    /**
+     * Instantiates a new Shadow layout.
+     *
+     * @param context the context
+     */
     public ShadowLayout(Context context) {
         super(context);
         initView(context, null);
     }
 
+    /**
+     * Instantiates a new Shadow layout.
+     *
+     * @param context the context
+     * @param attrs   the attrs
+     */
     public ShadowLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView(context, attrs);
     }
 
+    /**
+     * Instantiates a new Shadow layout.
+     *
+     * @param context      the context
+     * @param attrs        the attrs
+     * @param defStyleAttr the def style attr
+     */
     public ShadowLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView(context, attrs);
@@ -71,10 +92,18 @@ public class ShadowLayout extends FrameLayout {
         }
     }
 
+    /**
+     * Sets invalidate shadow on size changed.
+     *
+     * @param invalidateShadowOnSizeChanged the invalidate shadow on size changed
+     */
     public void setInvalidateShadowOnSizeChanged(boolean invalidateShadowOnSizeChanged) {
         mInvalidateShadowOnSizeChanged = invalidateShadowOnSizeChanged;
     }
 
+    /**
+     * Invalidate shadow.
+     */
     public void invalidateShadow() {
         mForceInvalidateShadow = true;
         requestLayout();
@@ -166,33 +195,68 @@ public class ShadowLayout extends FrameLayout {
         return output;
     }
 
+    /**
+     * Sets shadow color.
+     *
+     * @param shadowColor the shadow color
+     */
     public void setShadowColor(int shadowColor) {
         this.ShadowColor = shadowColor;
         invalidate();
     }
 
+    /**
+     * Gets original shadow color.
+     *
+     * @return the original shadow color
+     */
     public int getOriginalShadowColor() {
         return OriginalShadowColor;
     }
 
+    /**
+     * Gets shadow color.
+     *
+     * @return the shadow color
+     */
     public int getShadowColor() {
         return ShadowColor;
     }
 
+    /**
+     * Sets shadow radius.
+     *
+     * @param mShadowRadius the m shadow radius
+     */
     public void setmShadowRadius(float mShadowRadius) {
         this.mShadowRadius = mShadowRadius;
     }
 
+    /**
+     * Sets corner radius.
+     *
+     * @param mCornerRadius the m corner radius
+     */
     public void setmCornerRadius(float mCornerRadius) {
         this.mCornerRadius = mCornerRadius;
         invalidate();
     }
 
+    /**
+     * Sets dx.
+     *
+     * @param mDx the m dx
+     */
     public void setmDx(float mDx) {
         this.mDx = mDx;
         invalidate();
     }
 
+    /**
+     * Sets dy.
+     *
+     * @param mDy the m dy
+     */
     public void setmDy(float mDy) {
         this.mDy = mDy;
         invalidate();

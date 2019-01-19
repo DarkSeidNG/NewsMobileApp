@@ -18,11 +18,25 @@ import android.widget.VideoView;
 import com.tvcnews.app.R;
 import com.tvcnews.app.util.GetDeviceMetrics;
 
+/**
+ * The type Play video.
+ */
 public class PlayVideo extends DialogFragment {
 
+    /**
+     * The Video view.
+     */
     VideoView videoView;
+    /**
+     * The Activity.
+     */
     Activity activity;
 
+    /**
+     * Add context.
+     *
+     * @param ctx the ctx
+     */
     public void addContext(Activity ctx){
         this.activity = ctx;
     }

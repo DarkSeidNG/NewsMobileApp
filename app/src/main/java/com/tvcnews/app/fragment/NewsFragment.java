@@ -22,21 +22,46 @@ import com.tvcnews.app.util.ItemClickSupport;
 
 import java.util.ArrayList;
 
+/**
+ * The type News fragment.
+ */
 public class NewsFragment extends Fragment{
 
     private int page;
     private String title;
 
+    /**
+     * The Rec list.
+     */
     RecyclerView recList;
+    /**
+     * The Adapter.
+     */
     NewsListAdapter adapter;
+    /**
+     * The Array.
+     */
     ArrayList array = new ArrayList();
+    /**
+     * The Swipe refresh.
+     */
     SwipeRefreshLayout swipeRefresh;
 
 
+    /**
+     * Instantiates a new News fragment.
+     */
     public NewsFragment() {
         // Required empty public constructor
     }
 
+    /**
+     * New instance news fragment.
+     *
+     * @param page  the page
+     * @param title the title
+     * @return the news fragment
+     */
     public static NewsFragment newInstance(int page, String title) {
         NewsFragment fragment = new NewsFragment();
         Bundle args = new Bundle();

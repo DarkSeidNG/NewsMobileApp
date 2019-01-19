@@ -24,14 +24,53 @@ import android.widget.Toast;
 
 import com.tvcnews.app.R;
 
+/**
+ * The type View news activity.
+ */
 public class ViewNewsActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener {
+    /**
+     * The Collapsing toolbar layout.
+     */
     CollapsingToolbarLayout collapsingToolbarLayout;
+    /**
+     * The Fab.
+     */
     FloatingActionButton fab;
+    /**
+     * The App bar layout.
+     */
     AppBarLayout appBarLayout;
-    ImageView back, save, imageView4, award_1,award_2;
-    TextView title,newsBody;
+    /**
+     * The Back.
+     */
+    ImageView back, /**
+     * The Save.
+     */
+    save, /**
+     * The Image view 4.
+     */
+    imageView4, /**
+     * The Award 1.
+     */
+    award_1, /**
+     * The Award 2.
+     */
+    award_2;
+    /**
+     * The Title.
+     */
+    TextView title, /**
+     * The News body.
+     */
+    newsBody;
+    /**
+     * The Id.
+     */
     int id;
 
+    /**
+     * The Status bar.
+     */
     RelativeLayout statusBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

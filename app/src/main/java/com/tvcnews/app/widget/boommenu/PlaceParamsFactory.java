@@ -11,6 +11,16 @@ import com.tvcnews.app.widget.boommenu.Types.PlaceType;
  */
 public class PlaceParamsFactory {
 
+    /**
+     * Get dot params frame layout . layout params [ ].
+     *
+     * @param placeType    the place type
+     * @param buttonWidth  the button width
+     * @param buttonHeight the button height
+     * @param dotWidth     the dot width
+     * @param dotHeight    the dot height
+     * @return the frame layout . layout params [ ]
+     */
     public static FrameLayout.LayoutParams[] getDotParams(
             PlaceType placeType,
             int buttonWidth,
@@ -620,6 +630,16 @@ public class PlaceParamsFactory {
         return ps;
     }
 
+    /**
+     * Get bar params frame layout . layout params [ ].
+     *
+     * @param placeType    the place type
+     * @param buttonWidth  the button width
+     * @param buttonHeight the button height
+     * @param barWidth     the bar width
+     * @param barHeight    the bar height
+     * @return the frame layout . layout params [ ]
+     */
     public static FrameLayout.LayoutParams[] getBarParams(
             PlaceType placeType,
             int buttonWidth,

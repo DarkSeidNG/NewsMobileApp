@@ -21,14 +21,29 @@ public class SocialIGListAdapter extends RecyclerView.Adapter<SocialIGListAdapte
 
     private LayoutInflater mInflater;
     private List<SocialItemsObject> items;
+    /**
+     * The Context.
+     */
     Context context;
 
+    /**
+     * Instantiates a new Social ig list adapter.
+     *
+     * @param context   the context
+     * @param itemsList the items list
+     */
     public SocialIGListAdapter(Context context, List<SocialItemsObject> itemsList) {
         this.context = context;
         this.items = itemsList;
         mInflater = LayoutInflater.from(context);
     }
 
+    /**
+     * Gets item.
+     *
+     * @param position the position
+     * @return the item
+     */
     public SocialItemsObject getItem(int position) {
         return items.get(position);
     }
@@ -53,11 +68,28 @@ public class SocialIGListAdapter extends RecyclerView.Adapter<SocialIGListAdapte
         return items.size();
     }
 
+    /**
+     * The type Social holder.
+     */
     public class SocialHolder extends RecyclerView.ViewHolder {
 
+        /**
+         * The News content mini.
+         */
         TextView newsContentMini;
-        ImageView newsImage,newsBookmark;
+        /**
+         * The News image.
+         */
+        ImageView newsImage, /**
+         * The News bookmark.
+         */
+        newsBookmark;
 
+        /**
+         * Instantiates a new Social holder.
+         *
+         * @param v the v
+         */
         public SocialHolder(View v) {
             super(v);
 

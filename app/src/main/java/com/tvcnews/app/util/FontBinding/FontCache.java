@@ -12,12 +12,11 @@ import java.util.Map;
 /**
  * A simple font cache that makes a font once when it's first asked for and keeps it for the
  * life of the application.
- *
+ * <p>
  * To use it, put your fonts in /assets/fonts.  You can access them in XML by their filename, minus
  * the extension (e.g. "Roboto-BoldItalic" or "roboto-bolditalic" for Roboto-BoldItalic.ttf).
- *
+ * <p>
  * To set custom names for fonts other than their filenames, call addFont().
- *
  */
 public class FontCache {
 
@@ -28,6 +27,12 @@ public class FontCache {
     private static FontCache instance;
     private Context mContext;
 
+    /**
+     * Gets instance.
+     *
+     * @param context the context
+     * @return the instance
+     */
     public static FontCache getInstance(Context context) {
         if (instance == null) {
             instance = new FontCache(context.getApplicationContext());
@@ -35,6 +40,12 @@ public class FontCache {
         return instance;
     }
 
+    /**
+     * Add font.
+     *
+     * @param name         the name
+     * @param fontFilename the font filename
+     */
     public void addFont(String name, String fontFilename) {
         fontMapping.put(name, fontFilename);
     }
@@ -57,6 +68,12 @@ public class FontCache {
         }
     }
 
+    /**
+     * Get typeface.
+     *
+     * @param fontName the font name
+     * @return the typeface
+     */
     public Typeface get(String fontName) {
         String fontFilename = fontMapping.get(fontName);
         if (fontFilename == null) {
