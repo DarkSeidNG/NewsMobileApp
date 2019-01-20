@@ -1,24 +1,6 @@
 <resources>
-    <string name="app_name">TVC News</string>
+    <string name="app_name">News App</string>
 
-    <string name="text_content"><body><h1>Heading Text</h1>
-    <p>
-        This is just to show how we can format <strong>HTML</strong> text in android
-    </p>
-    <img src="test.jpg"/>
-    <blockquote>Example from <a href="www.facebook.com/ifwaxtel">iFwAxTeL</a></blockquote>
-    </body></string>
-
-
-    <string name="news_content_1">This is a test content that states that Buhari just came back to Nigeria looking all good
-    and chatty as Former acting president Professor Yemi Osinbajo stated earlier while he was in London
-    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-    bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</string>
 
     <string-array name="news_title">
         <item>TVC wins big at Nigeria’s 2017 City People Awards</item>

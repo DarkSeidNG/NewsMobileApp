@@ -1,42 +1,12 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="actionBarSize">90dp</dimen>
-    <dimen name="actionBarSizeSmall">50dp</dimen>
 
-    <dimen name="normal_text_small">11sp</dimen>
     <dimen name="normal_text_medium">14sp</dimen>
-    <dimen name="normal_text_large">17sp</dimen>
 
-    <dimen name="header_text_small">18sp</dimen>
-    <dimen name="header_text_medium">23sp</dimen>
     <dimen name="header_text_large">30sp</dimen>
 
 
-    <dimen name="default_corner_radius">4dp</dimen>
-    <dimen name="default_shadow_radius">4dp</dimen>
-
-    <dimen name="default_boom_button_corner_radius">28dp</dimen>
-
-    <dimen name="default_circle_button_corner_2radius">80dp</dimen>
-    <dimen name="default_circle_button_corner_radius">40dp</dimen>
-    <dimen name="default_circle_button_text_size">10sp</dimen>
-
-    <dimen name="default_ham_button_corner_radius">3dp</dimen>
-
-
-    <dimen name="color_wheel_radius">124dp</dimen>
-    <dimen name="color_wheel_thickness">8dp</dimen>
-    <dimen name="color_center_halo_radius">60dp</dimen>
-    <dimen name="color_center_radius">54dp</dimen>
-    <dimen name="color_pointer_halo_radius">18dp</dimen>
-    <dimen name="color_pointer_radius">14dp</dimen>
-
     <!-- Standart dimens for the bars -->
-    <dimen name="bar_thickness">4dp</dimen>
-    <dimen name="bar_length">240dp</dimen>
-    <dimen name="bar_pointer_radius">6dp</dimen>
-    <dimen name="bar_pointer_halo_radius">14dp</dimen>
 
 </resources>

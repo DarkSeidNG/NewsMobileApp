@@ -7,21 +7,21 @@
     android:padding="20dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <android.support.v7.widget.SwitchCompat
+    <androidx.appcompat.widget.SwitchCompat
         android:text="Read News Offline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/switch1"
         android:layout_marginBottom="20dp"/>
 
-    <android.support.v7.widget.SwitchCompat
+    <androidx.appcompat.widget.SwitchCompat
         android:text="Receive Notifications"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/switch2"
         android:layout_marginBottom="20dp"/>
 
-    <android.support.v7.widget.SwitchCompat
+    <androidx.appcompat.widget.SwitchCompat
         android:text="Suggest products i might be interested in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
